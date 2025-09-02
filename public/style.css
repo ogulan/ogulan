@@ -1,0 +1,108 @@
+body {
+  background-color: #000;
+  color: #00ff00;
+  font-family: 'Courier New', monospace;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.header-bar {
+  background-color: red;
+  height: 5px;
+  width: 100%;
+}
+
+.container {
+  padding: 20px;
+}
+
+h1 {
+  font-size: 3rem;
+  text-shadow: 0 0 5px lime;
+}
+
+.intro {
+  background: #111;
+  padding: 10px;
+  border: 2px dashed magenta;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+nav a {
+  display: inline-block;
+  margin: 10px 0;
+  color: yellow;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+nav a:hover {
+  color: cyan;
+  background: #222;
+}
+
+.bg-gif {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 100px;
+  z-index: 0;
+  opacity: 0.5;
+}
+
+@keyframes flicker {
+  from { opacity: 0.8; }
+  to { opacity: 1; }
+}
+.title-box {
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  color: #fff;
+  background: linear-gradient(to right, magenta, cyan);
+  border: 4px double yellow;
+  box-shadow: 0 0 10px magenta;
+  text-shadow: 2px 2px #000;
+}
+
+.nav-buttons {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.nav-buttons a {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background: #111;
+  color: yellow;
+  font-size: 1.2rem;
+  border: 2px solid magenta;
+  text-decoration: none;
+  box-shadow: 0 0 5px magenta;
+}
+
+.nav-buttons a:hover {
+  background: magenta;
+  color: black;
+  border-color: yellow;
+}
+.logo-image {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.logo-image img {
+  width: 300px; /* zamiast max-width */
+  height: auto;
+  image-rendering: pixelated;
+}
+
+.carousel-title {
+  color: yellow;
+}

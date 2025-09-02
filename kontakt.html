@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Kontakt - OG UŁAN</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/style.css">
+  <style>
+    .contact-container {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 0;
+    }
+    
+    .contact-window {
+      background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+      border: 3px solid #ff00ff;
+      border-radius: 15px;
+      box-shadow: 0 0 30px rgba(255, 0, 255, 0.5), inset 0 0 20px rgba(255, 0, 255, 0.1);
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .contact-window::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 40px;
+      background: linear-gradient(90deg, #ff00ff, #00ffff, #ff00ff);
+      opacity: 0.8;
+    }
+    
+    .contact-header {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 10px 20px;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .contact-title {
+      font-family: 'Press Start 2P', cursive;
+      color: #fff;
+      font-size: 16px;
+      margin: 0;
+      text-shadow: 0 0 10px rgba(255, 0, 255, 0.8);
+      text-align: center;
+    }
+    
+    .contact-content {
+      padding: 30px;
+      background: rgba(0, 0, 0, 0.7);
+    }
+    
+    .contact-info {
+      display: grid;
+      gap: 20px;
+    }
+    
+    .contact-item {
+      background: rgba(255, 0, 255, 0.1);
+      border: 2px solid #ff00ff;
+      border-radius: 8px;
+      padding: 20px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .contact-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 0, 255, 0.2), transparent);
+      transition: left 0.5s ease;
+    }
+    
+    .contact-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(255, 0, 255, 0.4);
+      background: rgba(255, 0, 255, 0.2);
+    }
+    
+    .contact-item:hover::before {
+      left: 100%;
+    }
+    
+    .contact-label {
+      font-family: 'Press Start 2P', cursive;
+      color: #ff00ff;
+      font-size: 12px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+    
+    .contact-value {
+      font-family: 'Orbitron', monospace;
+      color: #00ffff;
+      font-size: 16px;
+      font-weight: bold;
+      text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+      word-break: break-all;
+    }
+    
+    .contact-value a {
+      color: #00ffff;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    
+    .contact-value a:hover {
+      color: #ff00ff;
+      text-shadow: 0 0 10px rgba(255, 0, 255, 0.8);
+    }
+    
+    .social-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    
+    .glitch-text {
+      animation: glitch 2s infinite;
+    }
+    
+    @keyframes glitch {
+      0%, 100% { transform: translate(0); }
+      20% { transform: translate(-1px, 1px); }
+      40% { transform: translate(1px, -1px); }
+      60% { transform: translate(-1px, -1px); }
+      80% { transform: translate(1px, 1px); }
+    }
+    
+    .contact-footer {
+      background: rgba(0, 0, 0, 0.9);
+      padding: 20px;
+      text-align: center;
+      border-top: 1px solid #ff00ff;
+    }
+    
+    .footer-text {
+      font-family: 'Press Start 2P', cursive;
+      color: #ff00ff;
+      font-size: 10px;
+      margin: 0;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1><div class="logo-image">
+      <a href="index.html"><img src="static/images/logo.png" alt="OG UŁAN" /></a>
+    </div></h1>
+    <div class="contact-container">
+      <div class="contact-window">
+        <div class="contact-header">
+          <h2 class="contact-title glitch-text">* CONTACT_TERMINAL *</h2>
+        </div>
+        
+        <div class="contact-content">
+          <div class="contact-info">
+            <!-- Instagram -->
+            <div class="contact-item">
+              <div class="contact-label">Instagram</div>
+              <div class="contact-value">
+                <a href="https://instagram.com/og_ulan" target="_blank">@og_ulan</a>
+              </div>
+            </div>
+            
+            <!-- Email -->
+            <div class="contact-item">
+              <div class="contact-label">Email</div>
+              <div class="contact-value">
+                <a href="mailto:og.ulan@example.com">og.ulan@example.com</a>
+              </div>
+            </div>
+            
+            <!-- YouTube -->
+            <div class="contact-item">
+              <div class="contact-label">YouTube</div>
+              <div class="contact-value">
+                <a href="https://youtube.com/@og_ulan" target="_blank">@og_ulan</a>
+              </div>
+            </div>
+            
+            <!-- TikTok -->
+            <div class="contact-item">
+              <div class="contact-label">TikTok</div>
+              <div class="contact-value">
+                <a href="https://tiktok.com/@og_ulan" target="_blank">@og_ulan</a>
+              </div>
+            </div>
+            
+            <!-- Discord -->
+            <div class="contact-item">
+              <div class="contact-label">Discord</div>
+              <div class="contact-value">og_ulan#1337</div>
+            </div>
+            
+          </div>
+        </div>
+        
+        <div class="contact-footer">
+          <p class="footer-text">* SYSTEM_READY * CONNECTION_ESTABLISHED *</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="nav-buttons" style="text-align: center; margin-top: 30px;">
+        <a href="index.html">[ WSTECZ ]</a>
+    </div>
+  </div>
+</body>
+</html>
