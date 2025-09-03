@@ -638,6 +638,13 @@ nav a:hover {
         white-space: nowrap;
         overflow: hidden; /* Hide overflow if text is too long */
         text-overflow: ellipsis; /* Add ellipsis for overflowed text */
+        font-size: 1.2rem; /* Adjusted font size for mobile buttons */
+        padding: 10px 20px; /* Adjusted padding for mobile buttons */
+    }
+
+    /* Main logo size adjustment */
+    .logo-image img {
+        width: 200px; /* Adjusted width for mobile logo */
     }
 
     /* Portfolio.html main captions centering and single line */
