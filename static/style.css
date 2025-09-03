@@ -1,3 +1,30 @@
+@font-face {
+    font-family: 'Orbitron';
+    src: url('../public/static/fonts/orbitron-400.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Orbitron';
+    src: url('../public/static/fonts/orbitron-700.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Orbitron';
+    src: url('../public/static/fonts/orbitron-900.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Press Start 2P';
+    src: url('../public/static/fonts/press-start-2p-400.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
 
 body {
   background: #000;
@@ -18,7 +45,7 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: 
+  background:
     /* Light gradient from top/logo area */
     radial-gradient(ellipse 1000px 500px at 50% 20%, rgba(0, 255, 0, 0.15) 0%, rgba(0, 255, 0, 0.08) 30%, rgba(0, 255, 0, 0.04) 60%, transparent 80%),
     /* Hexagonal honeycomb pattern */
