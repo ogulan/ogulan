@@ -2,95 +2,12 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OG UŁAN - Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="static/style.css">
-  <style>
-    .carousel-title {
-      font-family: 'Press Start 2P', cursive;
-      color: #ff00ff;
-      text-shadow: 2px 2px #000;
-      text-align: center;
-      margin-bottom: 20px;
-      margin-top: 60px;
-    }
-    .carousel-title:first-of-type {
-      margin-top: 40px;
-    }
-    .carousel-container {
-      margin-bottom: 80px;
-    }
-    .youtube-video-container {
-      width: 560px;
-      height: 315px;
-    }
-    .youtube-video-container iframe {
-      width: 100%;
-      height: 100%;
-    }
-    .thumbnail-title {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.7);
-      color: white;
-      text-align: center;
-      padding: 5px 0;
-      font-family: 'Press Start 2P', cursive;
-      font-size: 10px;
-      line-height: 1.4;
-      transition: background-color 0.3s ease;
-    }
-    
-    /* Efekt hover na video thumbnails - tylko gdy nie są expanded */
-    .portfolio-item-wrapper {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    
-    .portfolio-item-wrapper:not(.expanded):hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(255, 0, 255, 0.3);
-    }
-    
-    .portfolio-thumbnail-container {
-      position: relative;
-      overflow: hidden;
-      border-radius: 8px;
-      transition: all 0.3s ease;
-    }
-    
-    .portfolio-item-wrapper:not(.expanded) .portfolio-thumbnail-container:hover {
-      box-shadow: 0 0 20px rgba(255, 0, 255, 0.6);
-    }
-    
-    .portfolio-item-wrapper:not(.expanded) .portfolio-thumbnail-container:hover .video-thumbnail {
-      transform: scale(1.05);
-      filter: brightness(1.1) contrast(1.1);
-    }
-    
-    .video-thumbnail {
-      transition: transform 0.3s ease, filter 0.3s ease;
-    }
-    
-    .portfolio-item-wrapper:not(.expanded) .portfolio-thumbnail-container:hover .play-button {
-      transform: scale(1.2);
-      color: #ff00ff;
-      text-shadow: 0 0 10px rgba(255, 0, 255, 0.8);
-    }
-    
-    .play-button {
-      transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
-    }
-    
-    .portfolio-item-wrapper:not(.expanded) .portfolio-thumbnail-container:hover .thumbnail-title {
-      background-color: rgba(255, 0, 255, 0.8);
-      color: #000;
-      font-weight: bold;
-    }
-  </style>
 </head>
 <body>
   <div class="container">
@@ -105,7 +22,10 @@
       <!-- Project 14: Tazos -->
       <div class="portfolio-item-wrapper">
         <div class="portfolio-thumbnail-container">
-          <img src="content/portfolio/tazos_miniatura.png" alt="Video Thumbnail" class="video-thumbnail" />
+          <picture>
+            <source srcset="content/portfolio/tazos_miniatura.webp" type="image/webp">
+            <img src="content/portfolio/tazos_miniatura.png" alt="Video Thumbnail" class="video-thumbnail" loading="lazy" />
+          </picture>
           <div class="play-button">▶</div>
         </div>
         <div class="video-and-description-container" style="display: none;">
@@ -132,7 +52,7 @@
       <!-- Project 13: Plaza -->
       <div class="portfolio-item-wrapper">
         <div class="portfolio-thumbnail-container">
-          <img src="content/portfolio/plaza_miniatura.png" alt="Video Thumbnail" class="video-thumbnail" />
+          <img src="content/portfolio/plaza_miniatura.webp" alt="Video Thumbnail" class="video-thumbnail" loading="lazy" />
           <div class="play-button">▶</div>
         </div>
         <div class="video-and-description-container" style="display: none;">
@@ -159,7 +79,7 @@
       <!-- Project 12: Osiedle -->
       <div class="portfolio-item-wrapper">
         <div class="portfolio-thumbnail-container">
-          <img src="content/portfolio/osiedle_miniatura.png" alt="Video Thumbnail" class="video-thumbnail" />
+          <img src="content/portfolio/osiedle_miniatura.webp" alt="Video Thumbnail" class="video-thumbnail" loading="lazy" />
           <div class="play-button">▶</div>
         </div>
         <div class="video-and-description-container" style="display: none;">
@@ -186,7 +106,7 @@
       <!-- Project 11: Obiadek -->
       <div class="portfolio-item-wrapper">
         <div class="portfolio-thumbnail-container">
-          <img src="content/portfolio/obiad_miniatura.png" alt="Video Thumbnail" class="video-thumbnail" />
+          <img src="content/portfolio/obiad_miniatura.webp" alt="Video Thumbnail" class="video-thumbnail" loading="lazy" />
           <div class="play-button">▶</div>
         </div>
         <div class="video-and-description-container" style="display: none;">
@@ -213,7 +133,7 @@
       <!-- Project 10: U Zosi -->
       <div class="portfolio-item-wrapper">
         <div class="portfolio-thumbnail-container">
-          <img src="content/portfolio/u_zosi_miniatura.png" alt="Video Thumbnail" class="video-thumbnail" />
+          <img src="content/portfolio/u_zosi_miniatura.webp" alt="Video Thumbnail" class="video-thumbnail" loading="lazy" />
           <div class="play-button">▶</div>
         </div>
         <div class="video-and-description-container" style="display: none;">
@@ -240,7 +160,7 @@
           <!-- Project 9: Wake Up -->
           <div class="portfolio-item-wrapper">
             <div class="portfolio-thumbnail-container">
-              <img src="content/portfolio/wake_up_miniatura.png" alt="Video Thumbnail" class="video-thumbnail" />
+              <img src="content/portfolio/wake_up_miniatura.webp" alt="Video Thumbnail" class="video-thumbnail" loading="lazy" />
               <div class="play-button">▶</div>
             </div>
             <div class="video-and-description-container" style="display: none;">
@@ -267,7 +187,7 @@
           <!-- Project 8: Notorious -->
           <div class="portfolio-item-wrapper">
             <div class="portfolio-thumbnail-container">
-              <img src="content/portfolio/notorious_miniatura.png" alt="Video Thumbnail" class="video-thumbnail" />
+              <img src="content/portfolio/notorious_miniatura.webp" alt="Video Thumbnail" class="video-thumbnail" loading="lazy" />
               <div class="play-button">▶</div>
             </div>
             <div class="video-and-description-container" style="display: none;">
@@ -294,7 +214,7 @@
           <!-- Project 7: Bazar -->
           <div class="portfolio-item-wrapper">
             <div class="portfolio-thumbnail-container">
-              <img src="content/portfolio/bazar_miniatura.png" alt="Video Thumbnail" class="video-thumbnail" />
+              <img src="content/portfolio/bazar_miniatura.webp" alt="Video Thumbnail" class="video-thumbnail" loading="lazy" />
               <div class="play-button">▶</div>
             </div>
             <div class="video-and-description-container" style="display: none;">
@@ -321,7 +241,7 @@
           <!-- Project 6: Zombie -->
           <div class="portfolio-item-wrapper">
             <div class="portfolio-thumbnail-container">
-              <img src="content/portfolio/zombie_miniatura.png" alt="Video Thumbnail" class="video-thumbnail" />
+              <img src="content/portfolio/zombie_miniatura.webp" alt="Video Thumbnail" class="video-thumbnail" loading="lazy" />
               <div class="play-button">▶</div>
             </div>
             <div class="video-and-description-container" style="display: none;">
@@ -348,7 +268,7 @@
           <!-- Project 5: Tony -->
           <div class="portfolio-item-wrapper">
             <div class="portfolio-thumbnail-container">
-              <img src="content/portfolio/tony_miniatura.png" alt="Video Thumbnail" class="video-thumbnail" />
+              <img src="content/portfolio/tony_miniatura.webp" alt="Video Thumbnail" class="video-thumbnail" loading="lazy" />
               <div class="play-button">▶</div>
             </div>
             <div class="video-and-description-container" style="display: none;">
@@ -375,7 +295,7 @@
           <!-- Project 4: OG Fishing -->
           <div class="portfolio-item-wrapper">
             <div class="portfolio-thumbnail-container">
-              <img src="content/portfolio/og_fishing_miniatura.png" alt="Video Thumbnail" class="video-thumbnail" />
+              <img src="content/portfolio/og_fishing_miniatura.webp" alt="Video Thumbnail" class="video-thumbnail" loading="lazy" />
               <div class="play-button">▶</div>
             </div>
             <div class="video-and-description-container" style="display: none;">
@@ -402,7 +322,7 @@
           <!-- Project 3: Kiosk -->
           <div class="portfolio-item-wrapper">
             <div class="portfolio-thumbnail-container">
-              <img src="content/portfolio/kiosk_miniatura.png" alt="Video Thumbnail" class="video-thumbnail" />
+              <img src="content/portfolio/kiosk_miniatura.webp" alt="Video Thumbnail" class="video-thumbnail" loading="lazy" />
               <div class="play-button">▶</div>
             </div>
             <div class="video-and-description-container" style="display: none;">
@@ -429,7 +349,7 @@
           <!-- Project 2: California -->
           <div class="portfolio-item-wrapper">
             <div class="portfolio-thumbnail-container">
-              <img src="content/portfolio/california_miniatura.png" alt="Video Thumbnail" class="video-thumbnail" />
+              <img src="content/portfolio/california_miniatura.webp" alt="Video Thumbnail" class="video-thumbnail" loading="lazy" />
               <div class="play-button">▶</div>
             </div>
             <div class="video-and-description-container" style="display: none;">
@@ -456,7 +376,7 @@
           <!-- Project 1: Television -->
           <div class="portfolio-item-wrapper">
             <div class="portfolio-thumbnail-container">
-              <img src="content/portfolio/television_ikona.png" alt="Video Thumbnail" class="video-thumbnail" />
+              <img src="content/portfolio/television_ikona.webp" alt="Video Thumbnail" class="video-thumbnail" loading="lazy" />
               <div class="play-button">▶</div>
             </div>
             <div class="video-and-description-container" style="display: none;">
@@ -492,7 +412,7 @@
           <!-- Project 1: Mata 1 na 100 -->
           <div class="portfolio-item-wrapper">
             <div class="portfolio-thumbnail-container">
-              <img src="content/portfolio/1na100_miniatura.png" alt="Video Thumbnail" class="video-thumbnail" />
+              <img src="content/portfolio/1na100_miniatura.webp" alt="Video Thumbnail" class="video-thumbnail" loading="lazy" />
               <div class="play-button">▶</div>
             </div>
             <div class="video-and-description-container" style="display: none;">
@@ -519,7 +439,7 @@
           <!-- Project 2: Mata Szmata -->
           <div class="portfolio-item-wrapper">
             <div class="portfolio-thumbnail-container">
-              <img src="content/portfolio/szmata_miniatura.png" alt="Video Thumbnail" class="video-thumbnail" />
+              <img src="content/portfolio/szmata_miniatura.webp" alt="Video Thumbnail" class="video-thumbnail" loading="lazy" />
               <div class="play-button">▶</div>
             </div>
             <div class="video-and-description-container" style="display: none;">
