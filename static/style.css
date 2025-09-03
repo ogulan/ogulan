@@ -1,7 +1,3 @@
-
-
-
-
 body {
   background: #000;
   color: #00ff00;
@@ -633,4 +629,48 @@ nav a:hover {
 .discord-text p {
   margin-top: 10px;
   font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    /* Button text centering and single line */
+    .nav-buttons a {
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden; /* Hide overflow if text is too long */
+        text-overflow: ellipsis; /* Add ellipsis for overflowed text */
+    }
+
+    /* Portfolio.html main captions centering and single line */
+    .video-title {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    /* Portfolio.html grid layout (two thumbnails per row) */
+    .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px; /* Adjust as needed for spacing */
+        left: auto; /* Reset left property from flexbox */
+        position: static; /* Reset position from flexbox */
+        width: 100%; /* Ensure it takes full width */
+        justify-content: center; /* Center grid items if there's extra space */
+    }
+
+    .portfolio-item-wrapper {
+        width: auto; /* Let grid manage width */
+        margin: 0; /* Remove margins from flexbox */
+        padding: 10px; /* Adjust padding as needed */
+    }
+
+    /* Adjust carousel container width for smaller screens if it's still relevant */
+    .carousel-container {
+        width: 100%;
+    }
+
+    /* Hide carousel buttons on smaller screens if they interfere with grid layout */
+    .carousel-button {
+        display: none;
+    }
 }
