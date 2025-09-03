@@ -4,7 +4,7 @@ import socketserver
 import os
 
 # Zmień katalog roboczy na folder ze stroną
-os.chdir(os.path.dirname(os.path.abspath(__file__)))
+os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'public'))
 
 PORT = 8000
 
