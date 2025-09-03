@@ -18,11 +18,11 @@ class MyHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
 
 if __name__ == "__main__":
     with socketserver.TCPServer(('', PORT), MyHTTPRequestHandler) as httpd:
-        print(f"🚀 Serwer uruchomiony na http://localhost:{PORT}")
-        print(f"📂 Serwuje pliki z: {os.getcwd()}")
-        print("📱 Otwórz w przeglądarce: http://localhost:8000")
-        print("\n⚠️  Aby zatrzymać serwer, naciśnij Ctrl+C")
+        print(f"Serwer uruchomiony na http://localhost:{PORT}")
+        print(f"Serwuje pliki z: {os.getcwd()}")
+        print("Otworz w przegladarce: http://localhost:8000")
+        print("\nAby zatrzymac serwer, nacisnij Ctrl+C")
         try:
             httpd.serve_forever()
         except KeyboardInterrupt:
-            print("\n🛑 Serwer zatrzymany")
+            print("\nSerwer zatrzymany")
