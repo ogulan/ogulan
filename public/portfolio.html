@@ -64,7 +64,9 @@
     }
     @media (max-width: 768px) {
       .section-title {
-        font-size: 1.2rem;
+        font-size: 0.9rem;
+        white-space: nowrap;
+        text-align: center;
       }
       .portfolio-grid-container {
         grid-template-columns: repeat(2, 1fr);
@@ -73,6 +75,9 @@
       }
       .portfolio-thumbnail-container {
         height: 250px;
+      }
+      .nav-buttons a {
+        text-shadow: 0 0 3px #00ff00;
       }
     }
   </style>
@@ -327,7 +332,7 @@
 </div>
 
     <div class="nav-buttons">
-        <a href="index.html">[ WSTECZ ]</a>
+        <a href="index.html" class="back-button">[ WSTECZ ]</a>
     </div>
   </div>
 </body>
