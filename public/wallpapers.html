@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OG UŁAN - Tapety</title>
+  <link rel="stylesheet" href="static/style.min.css">
+  <style>
+    .portfolio-grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 25px;
+      padding: 20px;
+      margin-bottom: 50px;
+    }
+    
+    .wallpaper-item {
+      text-align: center;
+    }
+
+    .portfolio-thumbnail-container {
+      position: relative;
+      cursor: pointer;
+      width: 100%;
+      height: 350px; /* Wysokość dopasowana do pionowych tapet na telefon */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #000;
+      border: 2px solid #00ff00;
+      box-shadow: 5px 5px 0px #00ff00;
+      transition: all 0.3s ease;
+      overflow: hidden;
+    }
+    
+    .portfolio-thumbnail-container:hover {
+      transform: scale(1.05);
+      box-shadow: 8px 8px 0px #ff00ff;
+    }
+    
+    .wallpaper-thumbnail {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .download-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #000;
+      color: #00ff00;
+      border: 2px solid #00ff00;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 10px;
+      text-decoration: none;
+      box-shadow: 3px 3px 0 #00ff00;
+      transition: all 0.2s;
+    }
+    
+    .download-btn:hover {
+      background: #00ff00;
+      color: #000;
+      box-shadow: 5px 5px 0 #ff00ff;
+      transform: translateY(-2px);
+    }
+
+    .section-title {
+        font-family: 'Press Start 2P', cursive;
+        color: #00ff00;
+        text-shadow: 
+            2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 
+            1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+        text-align: center;
+        margin-top: 60px;
+        margin-bottom: 30px;
+        font-size: 2rem;
+        text-decoration: underline;
+        text-decoration-color: #ffffff;
+        text-decoration-thickness: 4px;
+        text-underline-offset: 10px;
+    }
+    
+    @media (max-width: 768px) {
+      .portfolio-grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+      }
+      .portfolio-thumbnail-container {
+        height: 250px;
+      }
+      .section-title {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1><div class="logo-image">
+      <a href="index.html"><img src="static/images/logo.png" alt="OG UŁAN" /></a>
+    </div></h1>
+
+    <h2 class="section-title">* WALLPAPERS *</h2>
+    
+    <div class="portfolio-grid-container">
+      
+      <div class="wallpaper-item">
+        <a href="content/wallpapers/TAPETA_BOXER.png" target="_blank">
+          <div class="portfolio-thumbnail-container">
+            <img src="content/wallpapers/TAPETA_BOXER.webp" alt="TAPETA_BOXER" class="wallpaper-thumbnail" loading="lazy" />
+          </div>
+        </a>
+        <a href="content/wallpapers/TAPETA_BOXER.png" download class="download-btn">[ POBIERZ ]</a>
+      </div>
+
+      <div class="wallpaper-item">
+        <a href="content/wallpapers/TAPETA_CYMBERGAJ.png" target="_blank">
+          <div class="portfolio-thumbnail-container">
+            <img src="content/wallpapers/TAPETA_CYMBERGAJ.webp" alt="TAPETA_CYMBERGAJ" class="wallpaper-thumbnail" loading="lazy" />
+          </div>
+        </a>
+        <a href="content/wallpapers/TAPETA_CYMBERGAJ.png" download class="download-btn">[ POBIERZ ]</a>
+      </div>
+
+      <div class="wallpaper-item">
+        <a href="content/wallpapers/TAPETA_DEPRESYJNA.png" target="_blank">
+          <div class="portfolio-thumbnail-container">
+            <img src="content/wallpapers/TAPETA_DEPRESYJNA.webp" alt="TAPETA_DEPRESYJNA" class="wallpaper-thumbnail" loading="lazy" />
+          </div>
+        </a>
+        <a href="content/wallpapers/TAPETA_DEPRESYJNA.png" download class="download-btn">[ POBIERZ ]</a>
+      </div>
+
+      <div class="wallpaper-item">
+        <a href="content/wallpapers/TAPETA_DEPRESYJNA2.png" target="_blank">
+          <div class="portfolio-thumbnail-container">
+            <img src="content/wallpapers/TAPETA_DEPRESYJNA2.webp" alt="TAPETA_DEPRESYJNA2" class="wallpaper-thumbnail" loading="lazy" />
+          </div>
+        </a>
+        <a href="content/wallpapers/TAPETA_DEPRESYJNA2.png" download class="download-btn">[ POBIERZ ]</a>
+      </div>
+
+      <div class="wallpaper-item">
+        <a href="content/wallpapers/TAPETA_DOMOFON.png" target="_blank">
+          <div class="portfolio-thumbnail-container">
+            <img src="content/wallpapers/TAPETA_DOMOFON.webp" alt="TAPETA_DOMOFON" class="wallpaper-thumbnail" loading="lazy" />
+          </div>
+        </a>
+        <a href="content/wallpapers/TAPETA_DOMOFON.png" download class="download-btn">[ POBIERZ ]</a>
+      </div>
+
+      <div class="wallpaper-item">
+        <a href="content/wallpapers/TAPETA_DZIAD.png" target="_blank">
+          <div class="portfolio-thumbnail-container">
+            <img src="content/wallpapers/TAPETA_DZIAD.webp" alt="TAPETA_DZIAD" class="wallpaper-thumbnail" loading="lazy" />
+          </div>
+        </a>
+        <a href="content/wallpapers/TAPETA_DZIAD.png" download class="download-btn">[ POBIERZ ]</a>
+      </div>
+
+      <div class="wallpaper-item">
+        <a href="content/wallpapers/TAPETA_DZIECIAK.png" target="_blank">
+          <div class="portfolio-thumbnail-container">
+            <img src="content/wallpapers/TAPETA_DZIECIAK.webp" alt="TAPETA_DZIECIAK" class="wallpaper-thumbnail" loading="lazy" />
+          </div>
+        </a>
+        <a href="content/wallpapers/TAPETA_DZIECIAK.png" download class="download-btn">[ POBIERZ ]</a>
+      </div>
+
+      <div class="wallpaper-item">
+        <a href="content/wallpapers/TAPETA_GARAZE.png" target="_blank">
+          <div class="portfolio-thumbnail-container">
+            <img src="content/wallpapers/TAPETA_GARAZE.webp" alt="TAPETA_GARAZE" class="wallpaper-thumbnail" loading="lazy" />
+          </div>
+        </a>
+        <a href="content/wallpapers/TAPETA_GARAZE.png" download class="download-btn">[ POBIERZ ]</a>
+      </div>
+
+      <div class="wallpaper-item">
+        <a href="content/wallpapers/TAPETA_KIEPSCY.png" target="_blank">
+          <div class="portfolio-thumbnail-container">
+            <img src="content/wallpapers/TAPETA_KIEPSCY.webp" alt="TAPETA_KIEPSCY" class="wallpaper-thumbnail" loading="lazy" />
+          </div>
+        </a>
+        <a href="content/wallpapers/TAPETA_KIEPSCY.png" download class="download-btn">[ POBIERZ ]</a>
+      </div>
+
+      <div class="wallpaper-item">
+        <a href="content/wallpapers/TAPETA_KIEPSCY2.png" target="_blank">
+          <div class="portfolio-thumbnail-container">
+            <img src="content/wallpapers/TAPETA_KIEPSCY2.webp" alt="TAPETA_KIEPSCY2" class="wallpaper-thumbnail" loading="lazy" />
+          </div>
+        </a>
+        <a href="content/wallpapers/TAPETA_KIEPSCY2.png" download class="download-btn">[ POBIERZ ]</a>
+      </div>
+
+      <div class="wallpaper-item">
+        <a href="content/wallpapers/TAPETA_KIEPSCY3.png" target="_blank">
+          <div class="portfolio-thumbnail-container">
+            <img src="content/wallpapers/TAPETA_KIEPSCY3.webp" alt="TAPETA_KIEPSCY3" class="wallpaper-thumbnail" loading="lazy" />
+          </div>
+        </a>
+        <a href="content/wallpapers/TAPETA_KIEPSCY3.png" download class="download-btn">[ POBIERZ ]</a>
+      </div>
+
+      <div class="wallpaper-item">
+        <a href="content/wallpapers/TAPETA_KIOSK.png" target="_blank">
+          <div class="portfolio-thumbnail-container">
+            <img src="content/wallpapers/TAPETA_KIOSK.webp" alt="TAPETA_KIOSK" class="wallpaper-thumbnail" loading="lazy" />
+          </div>
+        </a>
+        <a href="content/wallpapers/TAPETA_KIOSK.png" download class="download-btn">[ POBIERZ ]</a>
+      </div>
+
+      <div class="wallpaper-item">
+        <a href="content/wallpapers/TAPETA_OBIAD.png" target="_blank">
+          <div class="portfolio-thumbnail-container">
+            <img src="content/wallpapers/TAPETA_OBIAD.webp" alt="TAPETA_OBIAD" class="wallpaper-thumbnail" loading="lazy" />
+          </div>
+        </a>
+        <a href="content/wallpapers/TAPETA_OBIAD.png" download class="download-btn">[ POBIERZ ]</a>
+      </div>
+
+      <div class="wallpaper-item">
+        <a href="content/wallpapers/TAPETA_PLAZA.png" target="_blank">
+          <div class="portfolio-thumbnail-container">
+            <img src="content/wallpapers/TAPETA_PLAZA.webp" alt="TAPETA_PLAZA" class="wallpaper-thumbnail" loading="lazy" />
+          </div>
+        </a>
+        <a href="content/wallpapers/TAPETA_PLAZA.png" download class="download-btn">[ POBIERZ ]</a>
+      </div>
+
+      <div class="wallpaper-item">
+        <a href="content/wallpapers/TAPETA_POKOJ.png" target="_blank">
+          <div class="portfolio-thumbnail-container">
+            <img src="content/wallpapers/TAPETA_POKOJ.webp" alt="TAPETA_POKOJ" class="wallpaper-thumbnail" loading="lazy" />
+          </div>
+        </a>
+        <a href="content/wallpapers/TAPETA_POKOJ.png" download class="download-btn">[ POBIERZ ]</a>
+      </div>
+
+      <div class="wallpaper-item">
+        <a href="content/wallpapers/TAPETA_POKOJ2.png" target="_blank">
+          <div class="portfolio-thumbnail-container">
+            <img src="content/wallpapers/TAPETA_POKOJ2.webp" alt="TAPETA_POKOJ2" class="wallpaper-thumbnail" loading="lazy" />
+          </div>
+        </a>
+        <a href="content/wallpapers/TAPETA_POKOJ2.png" download class="download-btn">[ POBIERZ ]</a>
+      </div>
+
+      <div class="wallpaper-item">
+        <a href="content/wallpapers/TAPETA_POKOJ3.png" target="_blank">
+          <div class="portfolio-thumbnail-container">
+            <img src="content/wallpapers/TAPETA_POKOJ3.webp" alt="TAPETA_POKOJ3" class="wallpaper-thumbnail" loading="lazy" />
+          </div>
+        </a>
+        <a href="content/wallpapers/TAPETA_POKOJ3.png" download class="download-btn">[ POBIERZ ]</a>
+      </div>
+
+      <div class="wallpaper-item">
+        <a href="content/wallpapers/TAPETA_POKOJ4.png" target="_blank">
+          <div class="portfolio-thumbnail-container">
+            <img src="content/wallpapers/TAPETA_POKOJ4.webp" alt="TAPETA_POKOJ4" class="wallpaper-thumbnail" loading="lazy" />
+          </div>
+        </a>
+        <a href="content/wallpapers/TAPETA_POKOJ4.png" download class="download-btn">[ POBIERZ ]</a>
+      </div>
+
+      <div class="wallpaper-item">
+        <a href="content/wallpapers/TAPETA_SANDALY.png" target="_blank">
+          <div class="portfolio-thumbnail-container">
+            <img src="content/wallpapers/TAPETA_SANDALY.webp" alt="TAPETA_SANDALY" class="wallpaper-thumbnail" loading="lazy" />
+          </div>
+        </a>
+        <a href="content/wallpapers/TAPETA_SANDALY.png" download class="download-btn">[ POBIERZ ]</a>
+      </div>
+
+      <div class="wallpaper-item">
+        <a href="content/wallpapers/TAPETA_SMAZALNIA.png" target="_blank">
+          <div class="portfolio-thumbnail-container">
+            <img src="content/wallpapers/TAPETA_SMAZALNIA.webp" alt="TAPETA_SMAZALNIA" class="wallpaper-thumbnail" loading="lazy" />
+          </div>
+        </a>
+        <a href="content/wallpapers/TAPETA_SMAZALNIA.png" download class="download-btn">[ POBIERZ ]</a>
+      </div>
+
+      <div class="wallpaper-item">
+        <a href="content/wallpapers/TAPETA_TAZOS.png" target="_blank">
+          <div class="portfolio-thumbnail-container">
+            <img src="content/wallpapers/TAPETA_TAZOS.webp" alt="TAPETA_TAZOS" class="wallpaper-thumbnail" loading="lazy" />
+          </div>
+        </a>
+        <a href="content/wallpapers/TAPETA_TAZOS.png" download class="download-btn">[ POBIERZ ]</a>
+      </div>
+
+      <div class="wallpaper-item">
+        <a href="content/wallpapers/TAPETA_WARP.png" target="_blank">
+          <div class="portfolio-thumbnail-container">
+            <img src="content/wallpapers/TAPETA_WARP.webp" alt="TAPETA_WARP" class="wallpaper-thumbnail" loading="lazy" />
+          </div>
+        </a>
+        <a href="content/wallpapers/TAPETA_WARP.png" download class="download-btn">[ POBIERZ ]</a>
+      </div>
+
+      <div class="wallpaper-item">
+        <a href="content/wallpapers/TAPETA_ZIMA.png" target="_blank">
+          <div class="portfolio-thumbnail-container">
+            <img src="content/wallpapers/TAPETA_ZIMA.webp" alt="TAPETA_ZIMA" class="wallpaper-thumbnail" loading="lazy" />
+          </div>
+        </a>
+        <a href="content/wallpapers/TAPETA_ZIMA.png" download class="download-btn">[ POBIERZ ]</a>
+      </div>
+
+      <div class="wallpaper-item">
+        <a href="content/wallpapers/TAPETA_ZIMA3.png" target="_blank">
+          <div class="portfolio-thumbnail-container">
+            <img src="content/wallpapers/TAPETA_ZIMA3.webp" alt="TAPETA_ZIMA3" class="wallpaper-thumbnail" loading="lazy" />
+          </div>
+        </a>
+        <a href="content/wallpapers/TAPETA_ZIMA3.png" download class="download-btn">[ POBIERZ ]</a>
+      </div>
+
+      <div class="wallpaper-item">
+        <a href="content/wallpapers/TAPETA_ZIMA4.png" target="_blank">
+          <div class="portfolio-thumbnail-container">
+            <img src="content/wallpapers/TAPETA_ZIMA4.webp" alt="TAPETA_ZIMA4" class="wallpaper-thumbnail" loading="lazy" />
+          </div>
+        </a>
+        <a href="content/wallpapers/TAPETA_ZIMA4.png" download class="download-btn">[ POBIERZ ]</a>
+      </div>
+
+      <div class="wallpaper-item">
+        <a href="content/wallpapers/TAPETA_ZOSIA2.png" target="_blank">
+          <div class="portfolio-thumbnail-container">
+            <img src="content/wallpapers/TAPETA_ZOSIA2.webp" alt="TAPETA_ZOSIA2" class="wallpaper-thumbnail" loading="lazy" />
+          </div>
+        </a>
+        <a href="content/wallpapers/TAPETA_ZOSIA2.png" download class="download-btn">[ POBIERZ ]</a>
+      </div>
+
+      <div class="wallpaper-item">
+        <a href="content/wallpapers/TAPETA_ZOSIA3.png" target="_blank">
+          <div class="portfolio-thumbnail-container">
+            <img src="content/wallpapers/TAPETA_ZOSIA3.webp" alt="TAPETA_ZOSIA3" class="wallpaper-thumbnail" loading="lazy" />
+          </div>
+        </a>
+        <a href="content/wallpapers/TAPETA_ZOSIA3.png" download class="download-btn">[ POBIERZ ]</a>
+      </div>
+
+      <div class="wallpaper-item">
+        <a href="content/wallpapers/TAPETA_ŻOSIA.png" target="_blank">
+          <div class="portfolio-thumbnail-container">
+            <img src="content/wallpapers/TAPETA_ŻOSIA.webp" alt="TAPETA_ŻOSIA" class="wallpaper-thumbnail" loading="lazy" />
+          </div>
+        </a>
+        <a href="content/wallpapers/TAPETA_ŻOSIA.png" download class="download-btn">[ POBIERZ ]</a>
+      </div>
+
+    </div>
+
+    <div class="nav-buttons" style="text-align: center; margin-top: 30px;">
+        <a href="index.html">[ WSTECZ ]</a>
+    </div>
+  </div>
+</body>
+</html>
