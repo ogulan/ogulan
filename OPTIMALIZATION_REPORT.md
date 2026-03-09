@@ -33,7 +33,7 @@
   - `content/portfolio/*.png` (16 plików)
   - `public/content/portfolio/*.png` (16 plików)
 - **Zachowano niezbędne pliki**: logo.png, video_thumbnail_placeholder.png, memory_card_na_strone.png
-- **Poprawa**: Zwolniono miejsce na dysku (około 10-15MB)
+- **Poprawa**: Zwolniono miejsce na dysku (około 10-15.MB)
 
 ## Wyniki Optymalizacji
 
