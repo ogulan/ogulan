@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <title>O mnie - OG UŁAN</title>
+  <link rel="stylesheet" href="static/style.min.css">
+  <style>
+    .section-title {
+      font-family: 'Press Start 2P', cursive;
+      color: #00ff00;
+      text-shadow:
+        2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000,
+        1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+      text-align: center;
+      margin-top: 60px;
+      margin-bottom: 30px;
+      font-size: 2rem;
+      text-decoration: underline;
+      text-decoration-color: #ffffff;
+      text-decoration-thickness: 4px;
+      text-underline-offset: 10px;
+    }
+
+    /* Karta postaci */
+    .player-card {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      gap: 30px;
+      padding: 25px;
+      background: rgba(0, 10, 0, 0.85);
+      border: 3px solid #00ff00;
+      box-shadow: 8px 8px 0 #ff00ff;
+    }
+    .player-avatar {
+      flex: 0 0 280px;
+    }
+    .avatar-frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 9/16;
+      background: #000;
+      border: 3px solid #00ff00;
+      box-shadow: inset 0 0 20px rgba(0, 255, 0, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .avatar-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .avatar-badge {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      background: #ff00ff;
+      color: #fff;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 10px;
+      padding: 5px 8px;
+    }
+    .player-name {
+      margin-top: 15px;
+      text-align: center;
+      font-family: 'Courier New', monospace;
+      font-weight: bold;
+      font-size: 1.6rem;
+      color: #fff;
+      text-shadow: 0 0 6px #00ff00;
+    }
+    .player-info {
+      flex: 1;
+      min-width: 0;
+      text-align: left;
+    }
+    .player-class {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 12px;
+      color: #ff00ff;
+      margin: 0 0 20px;
+      line-height: 1.8;
+    }
+    .player-bio {
+      font-family: 'Courier New', monospace;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: #fff;
+      padding: 15px;
+      border: 2px dashed magenta;
+      background: rgba(17, 17, 17, 0.8);
+      margin: 0 0 25px;
+    }
+    .stat {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .stat-label {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 10px;
+      color: #00ff00;
+    }
+    .stat-bar {
+      height: 16px;
+      border: 2px solid #00ff00;
+      background: #000;
+      padding: 2px;
+    }
+    /* Pasek z kratkami jak HP w grach */
+    .stat-fill {
+      height: 100%;
+      background: repeating-linear-gradient(90deg, #00ff00 0 8px, transparent 8px 10px);
+    }
+    .stat-fill.low {
+      background: repeating-linear-gradient(90deg, #ff3355 0 8px, transparent 8px 10px);
+    }
+
+    /* Osiągnięcia */
+    .achievements {
+      max-width: 900px;
+      margin: 0 auto 40px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .achievement {
+      display: flex;
+      gap: 15px;
+      align-items: flex-start;
+      text-align: left;
+      padding: 15px;
+      background: rgba(0, 10, 0, 0.85);
+      border: 2px solid #00ff00;
+      box-shadow: 5px 5px 0 #00ff00;
+      transition: all 0.3s ease;
+    }
+    .achievement:hover {
+      transform: translateY(-3px);
+      box-shadow: 8px 8px 0 #ff00ff;
+    }
+    .achievement-icon {
+      flex: 0 0 48px;
+      height: 48px;
+      border: 2px solid #ffcc00;
+      background: #1a1400;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .achievement-icon svg {
+      width: 32px;
+      height: 32px;
+      image-rendering: pixelated;
+    }
+    .achievement-title {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 11px;
+      color: #ffcc00;
+      margin: 4px 0 10px;
+      line-height: 1.5;
+    }
+    .achievement-desc {
+      font-family: 'Courier New', monospace;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: #fff;
+      margin: 0;
+    }
+    .achievement-desc a {
+      color: #00ff00;
+    }
+    .achievement-desc a:hover {
+      color: #ff00ff;
+    }
+    .unlocked {
+      display: inline-block;
+      margin-top: 8px;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 8px;
+      color: #00ff00;
+      opacity: 0.7;
+    }
+
+    @media (max-width: 768px) {
+      .section-title {
+        font-size: 1.2rem;
+      }
+      .player-card {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+        margin: 0 10px;
+      }
+      .player-avatar {
+        flex: none;
+        width: 220px;
+      }
+      .player-info {
+        width: 100%;
+      }
+      .stat {
+        grid-template-columns: 110px 1fr;
+      }
+      .stat-label {
+        font-size: 8px;
+      }
+      .achievements {
+        grid-template-columns: 1fr;
+        margin: 0 10px 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Pikselowy puchar dla ikon osiągnięć -->
+  <svg width="0" height="0" style="position:absolute">
+    <symbol id="trophy" viewBox="0 0 16 16" shape-rendering="crispEdges">
+      <path fill="#ffcc00" d="M4 1h8v1h2v4h-1v1h-1v1h-1v1h-1v2h1v1h1v2H4v-2h1v-1h1V9H5V8H4V7H3V6H2V2h2V1zm-1 2v2h1V3H3zm9 0v2h1V3h-1z"/>
+      <path fill="#fff6a0" d="M5 2h1v4H5z"/>
+    </symbol>
+  </svg>
+
+  <div class="container">
+    <h1><div class="logo-image">
+      <a href="index.html"><img src="static/images/logo.png" alt="OG UŁAN" /></a>
+    </div></h1>
+
+    <h2 class="section-title">* PLAYER 1 *</h2>
+    <div class="player-card">
+      <div class="player-avatar">
+        <div class="avatar-frame">
+          <span class="avatar-badge">P1</span>
+          <img src="content/o_mnie/ulan_omnie.webp" alt="Postać OG UŁAN" />
+        </div>
+        <div class="player-name">OG UŁAN</div>
+      </div>
+      <div class="player-info">
+        <p class="player-class">KLASA: ANIMATOR 3D<br>LVL: 99</p>
+        <p class="player-bio">
+          Robię animacje 3D w klimacie gier z lat 2000. Biorę polską codzienność
+          – osiedla, kioski, bazary i obiad u babci – i przepuszczam ją przez filtr
+          starej konsoli. Tworzę rolki, visualizery na koncerty, sceny do teledysków
+          i animacje dla marek.
+        </p>
+        <div class="stat">
+          <span class="stat-label">ANIMACJA</span>
+          <div class="stat-bar"><div class="stat-fill" style="width: 100%"></div></div>
+        </div>
+        <div class="stat">
+          <span class="stat-label">NOSTALGIA</span>
+          <div class="stat-bar"><div class="stat-fill" style="width: 100%"></div></div>
+        </div>
+        <div class="stat">
+          <span class="stat-label">HUMOR</span>
+          <div class="stat-bar"><div class="stat-fill" style="width: 100%"></div></div>
+        </div>
+        <div class="stat">
+          <span class="stat-label">MODELOWANIE</span>
+          <div class="stat-bar"><div class="stat-fill" style="width: 100%"></div></div>
+        </div>
+        <div class="stat">
+          <span class="stat-label">SEN</span>
+          <div class="stat-bar"><div class="stat-fill low" style="width: 15%"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="section-title">* ACHIEVEMENTS *</h2>
+    <div class="achievements">
+
+      <div class="achievement">
+        <div class="achievement-icon"><svg><use href="#trophy"/></svg></div>
+        <div>
+          <div class="achievement-title">HIGH SCORE</div>
+          <p class="achievement-desc"><a href="https://www.instagram.com/p/DMnfr9Yt1y9/" target="_blank">Rolka</a>, która przebiła 1 000 000 wyświetleń na Instagramie.</p>
+          <span class="unlocked">✔ ODBLOKOWANE</span>
+        </div>
+      </div>
+
+      <div class="achievement">
+        <div class="achievement-icon"><svg><use href="#trophy"/></svg></div>
+        <div>
+          <div class="achievement-title">NA SCENIE</div>
+          <p class="achievement-desc">Visualizery wyświetlane na koncercie Maty na <a href="portfolio/mata_1na100.html">Rap Stacji Festiwal</a>.</p>
+          <span class="unlocked">✔ ODBLOKOWANE</span>
+        </div>
+      </div>
+
+      <div class="achievement">
+        <div class="achievement-icon"><svg><use href="#trophy"/></svg></div>
+        <div>
+          <div class="achievement-title">BREAKING NEWS</div>
+          <p class="achievement-desc">Film <a href="portfolio/kiepscy.html">„Gdyby KIEPSCY byli grą z lat 2000”</a> trafił na <a href="https://gry.interia.pl/newsy/aktualnosci/news-swiat-wedlug-kiepskich-stal-sie-retro-gra-wideo-nietypowy-fi,nId,22423965" target="_blank">portal Interia</a>.</p>
+          <span class="unlocked">✔ ODBLOKOWANE</span>
+        </div>
+      </div>
+
+      <div class="achievement">
+        <div class="achievement-icon"><svg><use href="#trophy"/></svg></div>
+        <div>
+          <div class="achievement-title">W KLIPIE</div>
+          <p class="achievement-desc">Sceny do teledysku <a href="https://www.youtube.com/watch?v=Qzv4fvd3xX4" target="_blank">Otsochodzi – „NAWETT JAK”</a>.</p>
+          <span class="unlocked">✔ ODBLOKOWANE</span>
+        </div>
+      </div>
+
+      <div class="achievement">
+        <div class="achievement-icon"><svg><use href="#trophy"/></svg></div>
+        <div>
+          <div class="achievement-title">COMBO x20</div>
+          <p class="achievement-desc">Ponad 20 <a href="https://www.instagram.com/reel/DOqsFcEDy_x/" target="_blank">animacji</a> stworzonych dla GOG.com.</p>
+          <span class="unlocked">✔ ODBLOKOWANE</span>
+        </div>
+      </div>
+
+      <div class="achievement">
+        <div class="achievement-icon"><svg><use href="#trophy"/></svg></div>
+        <div>
+          <div class="achievement-title">POWER UP</div>
+          <p class="achievement-desc"><a href="https://www.instagram.com/p/DbYfZZtNWgs/" target="_blank">Animacje</a> dla Tiger Energy.</p>
+          <span class="unlocked">✔ ODBLOKOWANE</span>
+        </div>
+      </div>
+
+      <div class="achievement">
+        <div class="achievement-icon"><svg><use href="#trophy"/></svg></div>
+        <div>
+          <div class="achievement-title">CO-OP</div>
+          <p class="achievement-desc">Animacja dla youtubera Mietczyńskiego.</p>
+          <span class="unlocked">✔ ODBLOKOWANE</span>
+        </div>
+      </div>
+
+      <div class="achievement">
+        <div class="achievement-icon"><svg><use href="#trophy"/></svg></div>
+        <div>
+          <div class="achievement-title">GALERIA</div>
+          <p class="achievement-desc">Prace wystawione w ramach Wrocław Off Gallery Weekend.</p>
+          <span class="unlocked">✔ ODBLOKOWANE</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="nav-buttons back-link">
+      <a href="index.html">[ WSTECZ ]</a>
+    </div>
+  </div>
+</body>
+</html>
