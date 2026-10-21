@@ -30,6 +30,12 @@
       background: rgba(17, 17, 17, 0.8);
       text-align: left;
     }
+    .video-wrapper.vertical {
+      max-width: min(405px, 45vh);
+    }
+    .video-wrapper.vertical iframe {
+      aspect-ratio: 9/16;
+    }
     @media (max-width: 768px) {
       .nav-buttons a {
         font-size: 1rem;
@@ -48,7 +54,7 @@
     </div></h1>
     <h2 class="carousel-title" style="font-size: 2rem; color: #fff;">Halloween.mp4</h2>
     
-    <div class="video-wrapper">
+    <div class="video-wrapper vertical">
       <iframe src="https://www.youtube.com/embed/XrNeKq-lgJc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     
